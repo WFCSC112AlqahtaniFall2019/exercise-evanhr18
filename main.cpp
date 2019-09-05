@@ -6,7 +6,7 @@ int main() {
     const int NUM_ELEMENTS = 8;   // Number of elements
     vector <int> revVctr(8);               // User values
     int i;                        // Loop index
-    int temp;
+    int holder;
 
     cout << "Enter " << NUM_ELEMENTS << " integer values..." << endl;
     for (i = 0; i < NUM_ELEMENTS; ++i) {
@@ -15,9 +15,9 @@ int main() {
 
     // Reverse
     for (i = 0; i < (NUM_ELEMENTS / 2); ++i) {
-        temp = revVctr.at(i);
+        holder = revVctr.at(i);
         revVctr.at(i) = revVctr.at((NUM_ELEMENTS - 1) - i); // Swap
-        revVctr.at((NUM_ELEMENTS -1) - i) = temp;
+        revVctr.at((NUM_ELEMENTS -1) - i) = holder;
     }
 
     // Print values
